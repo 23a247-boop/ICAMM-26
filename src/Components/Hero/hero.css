@@ -1,0 +1,686 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* === HERO SECTION === */
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: var(--nav-h, 72px);
+  scroll-margin-top: var(--nav-h, 72px);
+}
+
+/* === HERO HEADER (White Background Section) === */
+.hero-header {
+  background: white;
+  border-bottom: 2px solid #e0e0e0;
+  min-height: 160px;
+  height: auto;
+  padding: 1rem 2rem;
+  overflow: hidden;
+}
+
+.header-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 2rem;
+  height: 100%;
+}
+
+.header-left-logos, .header-right-logos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3.5rem;
+}
+
+.header-logo-75, .header-logo-100 {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+.header-psg-logo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+.header-center {
+  text-align: center;
+}
+
+.main-logo {
+  height: 200px;
+  width: auto;
+  object-fit: contain;
+}
+
+
+.header-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0f357d;
+  margin: 0.5rem 0;
+  letter-spacing: 1px;
+}
+
+.header-location {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.header-info {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 15px;
+  border-left: 4px solid #0f357d;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.department-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0f357d;
+  margin: 0.5rem 0;
+}
+
+.college-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.address-text {
+  font-size: 1rem;
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+/* === HERO MAIN (Video Background Section) === */
+.hero-main {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #fdfdfd;
+}
+
+/* === CONFERENCE CONTENT === */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 150px; /* Increased space for sponsors */
+  bottom: 15px;
+}
+
+.conference-info {
+  background: rgba(255, 255, 255, 0.633);
+  backdrop-filter: blur(2px);
+  border-radius: 20px;
+  padding: 1rem 2.5rem;
+  margin-top: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.conference-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0f357d;
+  margin-top: -2rem;
+  letter-spacing: 2px;
+}
+
+.uppcase{
+  font-size: 20px;
+}
+
+.conference-on {
+  font-size: 1.5rem;
+  color: #0f357d;
+  margin: 1rem 0;
+  font-style: italic;
+}
+
+.conference-theme {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #0f357d;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0.5rem 0;
+  line-height: 1.3;
+}
+
+.conference-name {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #D59F13;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 1rem 0;
+}
+
+.conference-dates {
+  font-size: 1.5rem;
+  background-color: #0f357d;
+  width: fit-content;
+  padding: 10px;
+  color: white;
+  font-weight: 500;
+  margin: 1rem 0;
+  letter-spacing: 1px;
+  border-radius: 8px;
+}
+
+/* === VIDEO BACKGROUND === */
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* === MATH SYMBOLS === */
+.math-symbols {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.math-symbol {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.5rem;
+  font-family: 'Times New Roman', serif;
+  text-shadow: 0 0 10px rgba(30, 144, 255, 0.5);
+  animation: floatSymbol 12s ease-in-out forwards;
+  will-change: transform, opacity;
+}
+
+/* === HERO CONTENT === */
+.hero-inner {
+  display: grid;
+  grid-template-columns: 120px 1fr 120px;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  width: 100%;
+  margin-top: 2.5rem;
+  max-width: 1200px;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.side-logo {
+  width: 150px;
+  max-width: 11000px;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(2) contrast(2);
+  transition: all 0.3s ease;
+}
+
+.side-logo:hover {
+  filter: brightness(1.2) contrast(1.2);
+  transform: scale(1.05);
+}
+
+/* Separate class names for individual logos with same styling */
+.logo-75-years {
+  width: 150px;
+  max-width: 11000px;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(2.5) ;
+  transition: all 0.3s ease;
+}
+
+.logo-75-years:hover {
+  filter: brightness(1.2) contrast(1.2);
+  transform: scale(1.05);
+}
+
+.logo-100-years {
+  margin-left: -55px;
+  width: 250px;
+  max-width: 11000px;
+  height: auto;
+  object-fit: contain;
+  filter: brightness(2) contrast(2);
+  transition: all 0.3s ease;
+}
+
+.logo-100-years:hover {
+  filter: brightness(1.2) contrast(1.2);
+  transform: scale(1.05);
+}
+
+/* === HERO TITLES === */
+.hero-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #0f357d;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.hero-subtitle {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0.3rem 0;
+  letter-spacing: 0.5px;
+}
+
+.hero-subtitle.highlight {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f357d;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 1rem;
+}
+
+/* === DETAILS TEXT === */
+.hero-date {
+  font-size: 1.1rem;
+  color: #ffffff;
+  font-style: italic;
+  margin-top: 0.8rem;
+}
+
+.hero-org {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #0f357d;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+.hero-inst {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hero-loc {
+  font-size: 1rem;
+  color: #d6eaff;
+  margin-top: 0.2rem;
+  font-weight: 400;
+}
+
+/* === COUNTDOWN SECTION === */
+.countdown-container {
+  margin-top: 3rem;
+  margin-bottom: 4rem; /* Increased bottom margin to prevent overlap */
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* === SPONSORS SECTION === */
+.sponsors-section, 
+.sponsors-container {
+  position: absolute;
+  bottom: 30px; /* Moved up slightly */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  width: 90%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  /* Enhanced background for better separation */
+  background: rgba(255, 255, 255, 0.633);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  padding: 1.5rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  
+  z-index: 15; /* Higher z-index than countdown */
+}
+
+.sponsors-title {
+  color: #0f357d;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sponsors-text {
+  color: black;
+  font-size: 1rem;
+  font-style: italic;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* === RESPONSIVE STYLES === */
+/* Hide mobile logos on desktop */
+.header-all-logos-mobile {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .hero-header {
+    padding: 1rem;
+    min-height: auto;
+    height: auto;
+  }
+  
+  .header-content {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+  }
+  
+  .header-left-logos, .header-right-logos {
+    display: none;
+  }
+  
+  .header-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+  }
+  
+  .main-logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .main-logo {
+    height: 80px;
+  }
+  
+  .header-all-logos-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  
+  .header-all-logos-mobile img {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+  }
+  
+  .header-info {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .header-title {
+    font-size: 1rem;
+    line-height: 1.2;
+    margin: 0.3rem auto;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .header-location {
+    font-size: 1rem;
+    margin: 0.3rem auto;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .department-text {
+    font-size: 1rem;
+    margin: 0.3rem auto;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .college-text {
+    font-size: 0.9rem;
+    margin: 0.3rem auto;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .address-text {
+    font-size: 0.85rem;
+    margin: 0.3rem auto;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .conference-title {
+    font-size: 2rem;
+  }
+  
+  .conference-theme {
+    font-size: 1.5rem;
+  }
+  
+  .conference-name {
+    font-size: 2.5rem;
+  }
+  
+  .conference-dates {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .hero-inner {
+    grid-template-columns: 96px 1fr 96px;
+  }
+  
+  .side-logo {
+    max-width: 96px;
+    filter: brightness(2) contrast(2);
+  }
+  
+  .logo-75-years,
+  .logo-100-years {
+    max-width: 96px;
+    filter: brightness(2) contrast(2);
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 2.4rem;
+  }
+  
+  .hero-subtitle.highlight {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .hero-logos-mobile .side-logo {
+    max-width: 72px;
+    height: auto;
+    object-fit: contain;
+    filter: brightness(2) contrast(2);
+    transition: all 0.3s ease;
+  }
+  
+  .hero-logos-mobile .logo-75-years {
+    margin-top: 21px;
+    width: 90px;
+    height: auto;
+    margin-left: -5px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+  }
+  
+  .hero-logos-mobile .logo-100-years {
+    margin-left: 50px;
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+    transition: all 0.3s ease;
+  }
+  
+  .hero-left { order: 1; }
+  .hero-center { order: 2; }
+  .hero-right { order: 3; }
+  
+  .side-logo {
+    max-width: 72px;
+  }
+  
+  .hero-title {
+    font-size: 1.6rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.8rem;
+  }
+  
+  .hero-subtitle.highlight {
+    font-size: 1.3rem;
+  }
+  
+  .hero-inst {
+    font-size: 1.2rem;
+  }
+  
+  .sponsors-section {
+    margin-top: 1.5rem;
+  }
+}
+
+/* === RESPONSIVE FIXES FOR OVERLAP === */
+@media (max-width: 768px) {
+  .hero-content {
+    padding-bottom: 120px; /* Reduced for mobile */
+  }
+  
+  .countdown-container {
+    margin-bottom: 3rem; /* Reduced for mobile */
+  }
+  
+  .sponsors-section {
+    bottom: 20px;
+    width: 95%;
+    padding: 1rem 1.5rem;
+  }
+  
+  .sponsors-title {
+    font-size: 1rem;
+  }
+  
+  .sponsors-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    padding-bottom: 100px; /* Further reduced for small mobile */
+  }
+  
+  .countdown-container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .sponsors-section {
+    bottom: 15px;
+    width: 98%;
+    padding: 0.8rem 1rem;
+  }
+  
+  .sponsors-title {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+  
+  .sponsors-text {
+    font-size: 0.8rem;
+  }
+}

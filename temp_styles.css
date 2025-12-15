@@ -1,0 +1,74 @@
+/* === NEW LAYOUT MOBILE RESPONSIVE STYLES === */
+@media (max-width: 768px) {
+  .hero-header {
+    padding: 1.5rem 1rem;
+  }
+  
+  .header-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .header-left-logos, .header-right-logos {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .header-logo-75, .header-logo-100 {
+    height: 50px;
+  }
+  
+  .header-psg-logo {
+    height: 40px;
+  }
+  
+  .main-logo {
+    height: 70px;
+  }
+  
+  .header-title {
+    font-size: 1.3rem;
+  }
+  
+  .header-location {
+    font-size: 0.9rem;
+  }
+  
+  .header-info {
+    padding: 1rem;
+  }
+  
+  .department-text {
+    font-size: 1rem;
+  }
+  
+  .college-text {
+    font-size: 0.95rem;
+  }
+  
+  .address-text {
+    font-size: 0.85rem;
+  }
+  
+  .conference-info {
+    padding: 1.5rem 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .conference-title {
+    font-size: 1.3rem;
+  }
+  
+  .conference-theme {
+    font-size: 1rem;
+  }
+  
+  .conference-name {
+    font-size: 1.8rem;
+  }
+  
+  .conference-dates {
+    font-size: 1.2rem;
+  }
+}

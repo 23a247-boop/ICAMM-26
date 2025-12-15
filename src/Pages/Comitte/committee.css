@@ -1,0 +1,569 @@
+/* Committee Page Layout */
+.committee-page-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 50px auto;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.committee-page-content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.profile-position-header{
+  font-weight: 700;
+  color: #0f357d;
+  border-bottom: 2px solid #000;
+}
+
+/* Navigation Styles - Top Row */
+.committee-sidebar {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+}
+
+.sidebar-header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.sidebar-header h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-nav-item {
+  padding: 15px 30px;
+  background: transparent;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 0 1 auto;
+  min-width: 180px;
+}
+
+.sidebar-nav-item:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  color: #1e293b;
+  transform: translateY(-2px);
+}
+
+.sidebar-nav-item.active {
+  background: linear-gradient(135deg, #0f357d, #195ad4);
+  color: #ffffff;
+  font-weight: 600;
+  border-color: #0f357d;
+  box-shadow: 0 4px 12px rgba(15, 53, 125, 0.3);
+}
+
+/* Main Content Area */
+.committee-main-content {
+  background: #ffffff;
+  width: 100%;
+  border-radius: 15px;
+  padding: 50px 20px 50px 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.committee-content-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.committee-content-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0f357d;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* Organizing Committee Grid - 4 columns */
+.organising-committee-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0rem 20px;
+  justify-items: center;
+  align-items: stretch;
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+.organising-committee-grid > * {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Advisory Committee Grid - 3-4 columns responsive */
+.advisory-committee-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 0px 20px;
+  justify-items: center;
+  align-items: stretch;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Technical Committee Grid - 3 columns, 2 rows */
+.technical-committee-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0px 20px;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Organizing Members Grid */
+.organising-committees-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  gap: 20px 20px;
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 70px 0 28px 0;
+}
+
+.organising-committee-panel {
+  background: rgb(237, 255, 253);
+  box-shadow: 0 4px 28px rgba(110, 110, 110, 0.308);
+  border: 2.5px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px 18px;
+  min-height: 140px;
+  transition: all 0.3s ease;
+}
+
+.organising-committee-panel:hover {
+  box-shadow: 0 4px 24px rgba(15, 53, 125, 0.26);
+  border-color: #0f357d;
+  transform: translateY(-2px);
+}
+
+.org-panel-title {
+  font-size: 1.08rem;
+  font-weight: 800;
+  color: #0f357d;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.organising-committee-panel .org-committee-members {
+  margin: 0;
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.organising-committee-panel .org-committee-members li {
+  font-size: 0.98rem;
+  margin: 6px 0;
+  color: #333;
+}
+
+/* Position Title */
+.position-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #0f357d;
+  margin-bottom: 10px;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+
+/* Committee Section */
+.committee-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Tablet Responsive (1024px - 1400px) */
+@media (max-width: 1400px) {
+  .advisory-committee-grid {
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap: 0px 20px;
+    max-width: 1100px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .committee-main-content {
+    padding: 40px 30px;
+  }
+
+  .committee-content-title {
+    font-size: 2.2rem;
+  }
+
+  .sidebar-nav-item {
+    min-width: 160px;
+    padding: 12px 25px;
+  }
+}
+
+/* Medium Tablet (768px - 1100px) */
+@media (max-width: 1100px) {
+  .organising-committee-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0rem 20px;
+    max-width: 900px;
+  }
+
+  .advisory-committee-grid {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 0px 20px;
+    max-width: 900px;
+  }
+
+  .technical-committee-grid {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 0px 20px;
+    max-width: 900px;
+  }
+
+  .organising-committees-grid {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    max-width: 1000px;
+  }
+
+  .sidebar-nav-item {
+    min-width: 140px;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet Portrait (768px - 1024px) */
+@media (max-width: 1024px) {
+  .committee-page-container {
+    margin: 60px auto;
+  }
+
+  .committee-page-content {
+    gap: 30px;
+  }
+
+  .committee-main-content {
+    padding: 35px 25px;
+  }
+
+  .sidebar-nav {
+    gap: 12px;
+  }
+}
+
+/* Mobile Landscape & Small Tablet (600px - 768px) */
+@media (max-width: 768px) {
+  .committee-page-container {
+    margin: 40px auto;
+    padding: 0 15px;
+  }
+
+  .organising-committee-grid {
+    grid-template-columns: 1fr;
+    gap: 0rem 20px;
+    max-width: 400px;
+  }
+
+  .advisory-committee-grid {
+    grid-template-columns: 1fr;
+    gap: 0px 20px;
+    max-width: 98vw;
+    padding: 0 12px;
+  }
+
+  .technical-committee-grid {
+    grid-template-columns: 1fr;
+    gap: 0px 20px;
+    max-width: 98vw;
+    padding: 0 12px;
+  }
+
+  .organising-committees-grid {
+    grid-template-columns: 1fr;
+    padding: 0 12px;
+  }
+
+  .committee-main-content {
+    padding: 30px 20px;
+    border-radius: 12px;
+  }
+
+  .committee-content-title {
+    font-size: 2rem;
+  }
+
+  .sidebar-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sidebar-nav-item {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+/* Mobile Portrait (480px - 600px) */
+@media (max-width: 600px) {
+  .committee-page-container {
+    margin: 30px auto;
+    padding: 0 12px;
+  }
+
+  .committee-content-title {
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+  }
+
+  .sidebar-header h3 {
+    font-size: 1.2rem;
+  }
+
+  .organising-committee-panel {
+    padding: 18px 15px;
+  }
+
+  .org-panel-title {
+    font-size: 1rem;
+  }
+
+  .organising-committee-panel .org-committee-members li {
+    font-size: 0.9rem;
+  }
+
+  .committee-sidebar {
+    padding: 20px;
+  }
+}
+
+/* Small Mobile (320px - 480px) */
+@media (max-width: 480px) {
+  .committee-page-container {
+    margin: 20px auto;
+    padding: 0 10px;
+  }
+
+  .committee-sidebar {
+    padding: 20px 15px;
+    border-radius: 12px;
+  }
+
+  .committee-main-content {
+    padding: 25px 15px;
+    border-radius: 12px;
+  }
+
+  .committee-content-title {
+    font-size: 1.6rem;
+  }
+
+  .sidebar-header {
+    margin-bottom: 15px;
+  }
+
+  .sidebar-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .sidebar-nav {
+    gap: 8px;
+  }
+
+  .sidebar-nav-item {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+  }
+
+  .position-title {
+    font-size: 1rem;
+  }
+
+  .organising-committee-panel {
+    padding: 15px 12px;
+  }
+
+  .org-panel-title {
+    font-size: 0.95rem;
+  }
+
+  .organising-committee-panel .org-committee-members {
+    padding-left: 18px;
+  }
+
+  .organising-committee-panel .org-committee-members li {
+    font-size: 0.85rem;
+    margin: 5px 0;
+  }
+}
+
+/* Extra Small Mobile (< 400px) */
+@media (max-width: 400px) {
+  .committee-page-container {
+    margin: 15px auto;
+    padding: 0 8px;
+  }
+
+  .committee-sidebar {
+    padding: 15px 12px;
+  }
+
+  .committee-main-content {
+    padding: 20px 12px;
+  }
+
+  .committee-content-header {
+    margin-bottom: 30px;
+  }
+
+  .committee-content-title {
+    font-size: 1.4rem;
+  }
+
+  .sidebar-header h3 {
+    font-size: 1rem;
+  }
+
+  .sidebar-nav-item {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+
+  .organising-committee-panel {
+    padding: 12px 10px;
+  }
+
+  .organising-committees-grid {
+    gap: 35px;
+    padding: 40px 0 20px 0;
+  }
+}
+
+/* Very Small Devices (< 360px) */
+@media (max-width: 360px) {
+  .committee-page-container {
+    margin: 10px auto;
+    padding: 0 5px;
+  }
+
+  .committee-sidebar {
+    padding: 12px 10px;
+  }
+
+  .committee-main-content {
+    padding: 18px 10px;
+  }
+
+  .committee-content-title {
+    font-size: 1.3rem;
+  }
+
+  .sidebar-nav-item {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+
+  .org-panel-title {
+    font-size: 0.9rem;
+  }
+
+  .organising-committee-panel .org-committee-members li {
+    font-size: 0.8rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .committee-sidebar {
+    display: none;
+  }
+
+  .committee-main-content {
+    box-shadow: none;
+    padding: 20px;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .sidebar-nav-item {
+    min-height: 44px;
+  }
+
+  .sidebar-nav-item:active {
+    transform: scale(0.98);
+  }
+
+  .organising-committee-panel:hover {
+    transform: none;
+  }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .committee-main-content,
+  .committee-sidebar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  }
+}
+
+/* Landscape Orientation on Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .committee-page-container {
+    margin: 20px auto;
+  }
+
+  .committee-main-content {
+    padding: 25px 20px;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .sidebar-nav-item {
+    flex: 0 1 auto;
+    min-width: 140px;
+  }
+}
+
+/* Accessibility - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .sidebar-nav-item,
+  .organising-committee-panel {
+    transition: none;
+  }
+}

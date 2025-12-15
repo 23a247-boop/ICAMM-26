@@ -1,0 +1,121 @@
+/* CommitteeCard Component Styles - Clean, Professional, No Photo */
+
+.committee-card {
+  width: 350px;
+  min-height: 220px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(3, 103, 202, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 2px solid #e6f3ff;
+  position: relative;
+  margin: 20px auto;
+  max-width: calc(100vw - 40px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.committee-card-body {
+  padding: 35px 20px 20px;
+  text-align: center;
+  background: #ffffff;
+}
+
+.committee-card-name {
+  margin: 0 0 12px 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #1e90ff, #4169e1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 2px 4px rgba(30, 144, 255, 0.08);
+}
+
+.committee-card-designation {
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ff6b35;
+  text-shadow: 0 1px 2px rgba(255, 107, 53, 0.18);
+  letter-spacing: 0.5px;
+}
+
+.committee-card-organisation {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #666;
+  line-height: 1.4;
+}
+
+.committee-card-footer {
+  padding: 0 20px 20px;
+  background: #ffffff;
+}
+
+.committee-card-decorative-line {
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, #ffd700 20%, #1e90ff 50%, #ffd700 80%, transparent 100%);
+  border-radius: 2px;
+  position: relative;
+}
+
+.committee-card-decorative-line::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background: #ffd700;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 2px #0f357d;
+}
+
+@media (max-width: 768px) {
+  .committee-card {
+    width: 280px;
+    margin: 10px auto;
+    min-height: 180px;
+    max-width: calc(100vw - 20px);
+  }
+  .committee-card-body {
+    padding: 25px 10px 10px;
+  }
+  .committee-card-name {
+    font-size: 1.1rem;
+  }
+  .committee-card-designation {
+    font-size: 0.9rem;
+  }
+  .committee-card-organisation {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .committee-card {
+    width: 220px;
+    margin: 8px auto;
+    min-height: 120px;
+    max-width: calc(100vw - 10px);
+  }
+  .committee-card-body {
+    padding: 15px 5px 5px;
+  }
+  .committee-card-name {
+    font-size: 1rem;
+  }
+  .committee-card-designation {
+    font-size: 0.8rem;
+  }
+  .committee-card-organisation {
+    font-size: 0.7rem;
+  }
+}

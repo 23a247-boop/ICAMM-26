@@ -1,0 +1,504 @@
+/* Registration Component Styles */
+
+.registration-container {
+  width: 100vw;
+  max-width: none;
+  margin: 0;
+  padding: 80px 20px;
+  background-color: #e9e9e9;
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.registration-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
+.registration-header {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.registration-title {
+  font-size: 40px;
+  font-weight: 800;
+  color: #000;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.title-icon {
+  font-size: 3rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-10px); }
+  60% { transform: translateY(-5px); }
+}
+
+.registration-subtitle {
+  font-size: 16px;
+  color: #6d6b6a;
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Main Content */
+.registration-main {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid #fbbf24;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Mandatory Notice */
+.mandatory-notice {
+  display: flex;
+  justify-content: center;
+}
+
+.notice-card {
+  background: linear-gradient(135deg, #f9fafb, #f3f4f6);
+  padding: 30px;
+  border-radius: 20px;
+  border: 2px solid #9ca3af;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  max-width: 600px;
+  box-shadow: 0 8px 25px rgba(156, 163, 175, 0.15);
+}
+
+.notice-icon {
+  font-size: 2.5rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.notice-text h3 {
+  color: #374151;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+}
+
+.notice-text p {
+  color: #4b5563;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Registration Fees Section */
+.registration-fees-section h3 {
+  color: #1e293b;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+
+.fees-table {
+  background: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+}
+
+.table-header {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 20px;
+  padding: 25px;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 20px;
+  padding: 25px;
+  border-bottom: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+}
+
+.table-row:hover {
+  background: #fef3c7;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-cell {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.table-cell.category {
+  color: #374151;
+  font-weight: 600;
+}
+
+.table-cell.early {
+  color: #059669;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.table-cell.late {
+  color: #dc2626;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* Registration Includes */
+.registration-includes h3 {
+  color: #1e293b;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 25px 0;
+  text-align: center;
+}
+
+.includes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.include-item {
+  background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+  padding: 25px;
+  border-radius: 15px;
+  border: 2px solid #a7f3d0;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.1);
+}
+
+.include-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.2);
+  border-color: #10b981;
+}
+
+.include-icon {
+  font-size: 1.8rem;
+  min-width: 30px;
+}
+
+.include-item span:last-child {
+  color: #065f46;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Special Notes */
+.special-notes {
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  padding: 30px;
+  border-radius: 20px;
+  border: 2px solid #93c5fd;
+}
+
+.special-notes h3 {
+  color: #1e40af;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.special-notes ul {
+  margin: 0;
+  padding-left: 25px;
+  color: #1e40af;
+}
+
+.special-notes li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.special-notes strong {
+  color: #1e3a8a;
+  font-weight: 700;
+}
+
+/* Mobile-first responsive design enhancements */
+@media (max-width: 1024px) {
+  /* Touch-friendly improvements */
+  .include-item,
+  .notice-card {
+    min-height: 44px; /* Minimum touch target size */
+  }
+  
+  /* Better text readability on mobile */
+  body {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+  
+  /* Prevent horizontal scroll */
+  .registration-container {
+    overflow-x: hidden;
+  }
+}
+@media (max-width: 1024px) {
+  .registration-container {
+    padding: 60px 15px;
+  }
+  
+  .registration-main {
+    padding: 40px 30px;
+  }
+  
+  .floating-shape {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .registration-container {
+    padding: 40px 10px;
+  }
+  
+  .title-icon {
+    font-size: 2.5rem;
+  }
+  
+  .registration-subtitle {
+    font-size: 1.1rem;
+    padding: 0 10px;
+  }
+  
+  .registration-main {
+    padding: 30px 20px;
+    gap: 30px;
+  }
+  
+  .notice-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    padding: 25px 20px;
+  }
+  
+  .notice-icon {
+    align-self: center;
+  }
+  
+  .table-header,
+  .table-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .table-cell {
+    justify-content: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #fde68a;
+  }
+  
+  .table-cell:last-child {
+    border-bottom: none;
+  }
+  
+  .table-cell.category::before {
+    content: "Category: ";
+    font-weight: 600;
+    color: #6b7280;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .table-cell.early::before {
+    content: "Early Bird: ";
+    font-weight: 600;
+    color: #6b7280;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .table-cell.late::before {
+    content: "Late Registration: ";
+    font-weight: 600;
+    color: #6b7280;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .includes-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .include-item {
+    padding: 20px;
+    flex-direction: row;
+  }
+  
+  .special-notes {
+    padding: 25px 20px;
+  }
+  
+  .special-notes ul {
+    padding-left: 20px;
+  }
+  
+  .special-notes li {
+    margin-bottom: 15px;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 480px) {
+  .registration-container {
+    padding: 30px 5px;
+  }
+  
+  .title-icon {
+    font-size: 2rem;
+  }
+  
+  .registration-subtitle {
+    font-size: 1rem;
+  }
+  
+  .registration-main {
+    padding: 25px 15px;
+    gap: 25px;
+  }
+  
+  .notice-card {
+    padding: 20px 15px;
+  }
+  
+  .notice-text h3 {
+    font-size: 1.1rem;
+  }
+  
+  .notice-text p {
+    font-size: 0.95rem;
+  }
+  
+  .registration-fees-section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+  
+  .table-header,
+  .table-row {
+    padding: 20px 15px;
+  }
+  
+  .table-cell {
+    padding: 15px 10px;
+    font-size: 0.95rem;
+  }
+  
+  .table-cell.category {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  .registration-includes h3 {
+    font-size: 1.3rem;
+  }
+  
+  .include-item {
+    padding: 18px 15px;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .include-icon {
+    font-size: 1.6rem;
+  }
+  
+  .include-item span:last-child {
+    font-size: 0.95rem;
+  }
+  
+  .special-notes {
+    padding: 20px 15px;
+  }
+  
+  .special-notes h3 {
+    font-size: 1.2rem;
+  }
+  
+  .special-notes li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+  .registration-container {
+    padding: 25px 3px;
+  }
+  
+  .title-icon {
+    font-size: 1.8rem;
+  }
+  
+  .registration-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .registration-main {
+    padding: 20px 12px;
+    gap: 20px;
+  }
+  
+  .notice-card {
+    padding: 18px 12px;
+  }
+  
+  .table-header,
+  .table-row {
+    padding: 15px 10px;
+  }
+  
+  .include-item {
+    padding: 15px 12px;
+  }
+  
+  .special-notes {
+    padding: 18px 12px;
+  }
+}

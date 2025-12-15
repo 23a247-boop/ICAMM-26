@@ -1,0 +1,472 @@
+:root {
+  --nav-h: 80px;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+/* NAVIGATION BAR */
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgb(211, 251, 255);
+  border-bottom: 1px solid lightgrey;
+  color: #0f357d;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.navigation.scrolled {
+  background: rgb(211, 251, 255);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  color: #0f357d;
+}
+
+/* CONTAINER */
+.nav-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* BRAND SECTION */
+.brand-title {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.conference-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #0f357d;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-left: 30px;
+  white-space: nowrap;
+}
+
+.navigation.scrolled .conference-name {
+  color: #0f357d;
+}
+
+.navigation.scrolled .register-btn {
+  background: #0f357d;
+  color: white;
+  border: 2px solid #0f357d;
+}
+
+.navigation.scrolled .register-btn:hover {
+  background: transparent;
+  color: #2c5aa0;
+  border: 2px solid #2c5aa0;
+}
+
+/* NAV MENU */
+.desktop-menu {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.nav-link {
+  color: inherit;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 0.5rem 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* DROPDOWN STYLES */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.dropdown-trigger:hover {
+  color: black;
+}
+
+.dropdown-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 0.5rem 0;
+  min-width: 200px;
+  margin-top: 0.1rem;
+  z-index: 1001;
+  animation: dropdownFadeIn 0.2s ease;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-item {
+  display: block;
+  padding: 0.75rem 1.25rem;
+  color: #0f357d;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dropdown-item:hover {
+  background: #f0f9ff;
+  color: #0084ff;
+}
+
+/* MOBILE DROPDOWN STYLES */
+.mobile-dropdown {
+  width: 100%;
+}
+
+.mobile-dropdown-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.3s ease;
+}
+
+.mobile-dropdown-trigger:hover {
+  color: #0084ff;
+}
+
+.mobile-dropdown-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.mobile-dropdown-icon.open {
+  transform: rotate(180deg);
+}
+
+.mobile-dropdown-menu {
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  animation: mobileDropdownFadeIn 0.3s ease;
+}
+
+@keyframes mobileDropdownFadeIn {
+  from {
+    opacity: 0;
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    max-height: 500px;
+  }
+}
+
+.mobile-dropdown-item {
+  display: block;
+  padding: 0.75rem 0;
+  color: #0f357d;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.mobile-dropdown-item:hover {
+  color: #0084ff;
+}
+
+/* REGISTER BUTTON */
+.register-btn {
+  background: #0f357d;
+  color: white;
+  border: 2px solid #0f357d;
+  padding: 0.65rem 1.3rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.register-btn:hover {
+  background: transparent;
+  color: #0f357d;
+  border: 2px solid #0f357d;
+}
+
+.mobile-register-btn {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+/* MOBILE MENU TOGGLE */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  color: inherit;
+  outline: none;
+  transition: transform 0.3s ease;
+  z-index: 1002;
+  flex-shrink: 0;
+}
+
+.mobile-menu-toggle:hover {
+  transform: scale(1.1);
+}
+
+.menu-button {
+  width: 28px;
+  height: 28px;
+  transition: all 0.3s ease;
+}
+
+/* SIDEBAR MENU */
+.sidebar-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  transition: transform 0.3s ease;
+  z-index: 1001;
+  padding-top: var(--nav-h);
+  transform: translateX(100%);
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.sidebar-menu.open {
+  top: 0;
+  min-height: 100vh;
+  transform: translateX(0);
+}
+
+/* Overlay for mobile menu */
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.sidebar-menu-links {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 0.1rem;
+  background-color: #fff;
+  min-height: calc(100vh - var(--nav-h));
+}
+
+.sidebar-menu .nav-link {
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: block;
+  width: 100%;
+}
+
+.sidebar-menu .nav-link:hover {
+  color: #0084ff;
+}
+
+/* RESPONSIVE */
+
+/* Large Screens (reduce gaps slightly) */
+@media (max-width: 1200px) {
+  .desktop-menu {
+    gap: 1rem;
+  }
+
+  .nav-link,
+  .dropdown-trigger {
+    font-size: 0.9rem;
+  }
+
+  .register-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Medium Screens (further reduce) */
+@media (max-width: 1024px) {
+  .conference-name {
+    font-size: 1.5rem;
+    margin-left: 15px;
+  }
+
+  .desktop-menu {
+    gap: 0.8rem;
+  }
+
+  .nav-link,
+  .dropdown-trigger {
+    font-size: 0.85rem;
+  }
+
+  .register-btn {
+    padding: 0.55rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Tablet & Mobile */
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .nav-container {
+    padding: 0 0.75rem;
+  }
+  
+  .conference-name {
+    font-size: 1.4rem;
+    color: #0f357d;
+    margin-left: 10px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .conference-name {
+    font-size: 1.2rem;
+    margin-left: 5px;
+  }
+
+  .mobile-menu-toggle {
+    padding: 0.25rem;
+  }
+
+  .menu-button {
+    width: 24px;
+    height: 24px;
+  }
+
+  .sidebar-menu-links {
+    padding: 1.5rem;
+  }
+
+  .sidebar-menu .nav-link,
+  .mobile-dropdown-trigger {
+    font-size: 1.1rem;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
+  .conference-name {
+    font-size: 1.1rem;
+    margin-left: 0;
+  }
+
+  .nav-container {
+    padding: 0 0.5rem;
+  }
+
+  .sidebar-menu-links {
+    padding: 1rem;
+  }
+}
+
+/* Prevent dropdown menu cutoff */
+.navigation {
+  overflow: visible;
+}
+
+.nav-container {
+  overflow: visible;
+}
+
+.desktop-menu {
+  overflow: visible;
+}
