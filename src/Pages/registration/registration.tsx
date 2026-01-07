@@ -5,8 +5,8 @@ const Registration: React.FC = () => {
   const registrationFees = [
     { 
       category: 'Academicians/Part time research scholars', 
-      early: '₹2,500', 
-      late: '₹3,000' 
+      early: ' ₹2,500', 
+      late: ' ₹3,000' 
     },
     { 
       category: 'Industry/R&D Institution participants', 
@@ -67,13 +67,13 @@ const Registration: React.FC = () => {
                 <span>Lunch & Refreshments</span>
               </div>
               <div className="include-item">
-                <span>Event Certificates</span>
+                <span>Certificates</span>
               </div>
             </div>
           </div>
 
           <div className="special-notes">
-            <h3>Important Notes</h3>
+            <h3>Key Information</h3>
             <ul>
               <li><strong>At least one author</strong> of each accepted paper must register for the conference</li>
               <li>For <strong>full time research scholars</strong>, a bonafide certificate duly signed by the research supervisor/head of the institution/department shall be attached along with the registration form</li>

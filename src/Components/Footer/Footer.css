@@ -2,8 +2,16 @@
 .footer {
   background: #0f357d;
   color: #fff;
-  padding: 2rem 0 2rem 0;
+  padding: 2.5rem 0;
   width: 100%;
+}
+
+.webs-deve{
+  color: #fff;
+}
+
+.webs-deve:hover{
+  color: #a7c6ff;
 }
 
 .footer-container {
@@ -28,28 +36,36 @@
 }
 
 .footer-conference {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
   color: #fff;
+  letter-spacing: 0.5px;
 }
 
 .footer-institution {
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: #fff;
+  margin-top: 0.3rem;
 }
 
 .footer-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 1.8rem;
   justify-content: center;
+  align-items: center;
 }
 
 .footer-link {
   color: #fff;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.05rem;
   transition: color 0.2s;
+  cursor: pointer;
+  padding: 0.5rem;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
 }
 
 .footer-link:hover {
@@ -59,16 +75,165 @@
 .footer-bottom {
   text-align: center;
   margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   font-size: 0.95rem;
   color: #fff;
 }
 
-@media (max-width: 600px) {
+/* Tablet - 768px and below */
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 0;
+  }
+  
+  .footer-container {
+    padding: 0 1.5rem;
+  }
+  
+  .footer-conference {
+    font-size: 1.5rem;
+  }
+  
+  .footer-institution {
+    font-size: 1rem;
+  }
+  
+  .footer-links {
+    gap: 1.5rem;
+  }
+  
+  .footer-link {
+    font-size: 1rem;
+  }
+  
+  .footer-bottom {
+    font-size: 0.9rem;
+  }
+}
+
+/* Small mobile - 480px and below */
+@media (max-width: 480px) {
+  .footer {
+    padding: 1.75rem 0;
+  }
+  
+  .footer-container {
+    padding: 0 1.25rem;
+  }
+  
   .footer-content {
+    gap: 1.25rem;
+  }
+  
+  .footer-conference {
+    font-size: 1.4rem;
+  }
+  
+  .footer-institution {
+    font-size: 0.95rem;
+  }
+  
+  .footer-links {
     flex-direction: column;
     gap: 1rem;
   }
-  .footer-links {
+  
+  .footer-link {
+    font-size: 1.1rem;
+    padding: 0.6rem;
+  }
+  
+  .footer-bottom {
+    margin-top: 1.25rem;
+    padding-top: 1.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra small mobile - 360px and below */
+@media (max-width: 360px) {
+  .footer {
+    padding: 1.5rem 0;
+  }
+  
+  .footer-container {
+    padding: 0 1rem;
+  }
+  
+  .footer-content {
     gap: 1rem;
+  }
+  
+  .footer-logo {
+    margin-bottom: 0.75rem;
+  }
+  
+  .footer-conference {
+    font-size: 1.3rem;
+  }
+  
+  .footer-institution {
+    font-size: 0.9rem;
+  }
+  
+  .footer-links {
+    gap: 0.9rem;
+  }
+  
+  .footer-link {
+    font-size: 1.05rem;
+    padding: 0.55rem;
+  }
+  
+  .footer-bottom {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Ultra small mobile - 320px */
+@media (max-width: 320px) {
+  .footer {
+    padding: 1.25rem 0;
+  }
+  
+  .footer-container {
+    padding: 0 0.75rem;
+  }
+  
+  .footer-content {
+    gap: 0.9rem;
+  }
+  
+  .footer-logo {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-conference {
+    font-size: 1.25rem;
+    letter-spacing: 0.3px;
+  }
+  
+  .footer-institution {
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+  }
+  
+  .footer-links {
+    gap: 0.8rem;
+  }
+  
+  .footer-link {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  
+  .footer-bottom {
+    margin-top: 0.9rem;
+    padding-top: 0.9rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
   }
 }

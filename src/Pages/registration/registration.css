@@ -1,4 +1,4 @@
-/* Registration Component Styles */
+/* Registration Component Styles - IMPROVED */
 
 .registration-container {
   width: 100vw;
@@ -25,7 +25,7 @@
 }
 
 .registration-title {
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 800;
   color: #000;
   padding: 12px;
@@ -47,11 +47,11 @@
 }
 
 .registration-subtitle {
-  font-size: 16px;
-  color: #6d6b6a;
+  font-size: 1.1rem;
+  color: #4b5563;
   margin: 0;
   font-weight: 500;
-  line-height: 1.6;
+  line-height: 1.7;
   text-align: center;
 }
 
@@ -97,21 +97,22 @@
 
 .notice-text h3 {
   color: #374151;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 700;
   margin: 0 0 12px 0;
 }
 
 .notice-text p {
   color: #4b5563;
+  font-size: 1.05rem;
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 /* Registration Fees Section */
 .registration-fees-section h3 {
   color: #1e293b;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 700;
   margin: 0 0 30px 0;
   text-align: center;
@@ -133,7 +134,7 @@
   gap: 20px;
   padding: 25px;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
 }
 
 .table-row {
@@ -156,7 +157,8 @@
 .table-cell {
   display: flex;
   align-items: center;
-  font-size: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
 }
 
 .table-cell.category {
@@ -167,19 +169,19 @@
 .table-cell.early {
   color: #059669;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .table-cell.late {
   color: #dc2626;
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 /* Registration Includes */
 .registration-includes h3 {
   color: #1e293b;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 700;
   margin: 0 0 25px 0;
   text-align: center;
@@ -201,6 +203,7 @@
   gap: 15px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(16, 185, 129, 0.1);
+  min-height: 44px;
 }
 
 .include-item:hover {
@@ -217,7 +220,7 @@
 .include-item span:last-child {
   color: #065f46;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.05rem;
 }
 
 /* Special Notes */
@@ -230,7 +233,7 @@
 
 .special-notes h3 {
   color: #1e40af;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
   margin: 0 0 20px 0;
   display: flex;
@@ -245,9 +248,10 @@
 }
 
 .special-notes li {
-  margin-bottom: 12px;
-  line-height: 1.6;
+  margin-bottom: 14px;
+  line-height: 1.7;
   font-weight: 500;
+  font-size: 1.05rem;
 }
 
 .special-notes strong {
@@ -255,25 +259,7 @@
   font-weight: 700;
 }
 
-/* Mobile-first responsive design enhancements */
-@media (max-width: 1024px) {
-  /* Touch-friendly improvements */
-  .include-item,
-  .notice-card {
-    min-height: 44px; /* Minimum touch target size */
-  }
-  
-  /* Better text readability on mobile */
-  body {
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-  }
-  
-  /* Prevent horizontal scroll */
-  .registration-container {
-    overflow-x: hidden;
-  }
-}
+/* Tablet - 1024px */
 @media (max-width: 1024px) {
   .registration-container {
     padding: 60px 15px;
@@ -283,14 +269,24 @@
     padding: 40px 30px;
   }
   
-  .floating-shape {
-    display: none;
+  .registration-title {
+    font-size: 2.2rem;
+  }
+  
+  .include-item,
+  .notice-card {
+    min-height: 44px;
   }
 }
 
+/* Tablet - 768px */
 @media (max-width: 768px) {
   .registration-container {
-    padding: 40px 10px;
+    padding: 40px 15px;
+  }
+  
+  .registration-title {
+    font-size: 2rem;
   }
   
   .title-icon {
@@ -298,7 +294,117 @@
   }
   
   .registration-subtitle {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
+    padding: 0 15px;
+    line-height: 1.7;
+  }
+  
+  .registration-main {
+    padding: 35px 25px;
+    gap: 35px;
+  }
+  
+  .notice-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 30px 25px;
+  }
+  
+  .notice-text h3 {
+    font-size: 1.3rem;
+  }
+  
+  .notice-text p {
+    font-size: 1.05rem;
+  }
+  
+  .notice-icon {
+    align-self: center;
+  }
+  
+  .registration-fees-section h3 {
+    font-size: 1.7rem;
+  }
+  
+  .table-header,
+  .table-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .table-cell {
+    justify-content: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #fde68a;
+    font-size: 1.05rem;
+  }
+  
+  .table-cell:last-child {
+    border-bottom: none;
+  }
+  
+  .table-cell.category {
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+  
+  .table-cell.early,
+  .table-cell.late {
+    font-size: 1.3rem;
+  }
+  
+  .includes-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .include-item {
+    padding: 22px;
+    flex-direction: row;
+  }
+  
+  .include-item span:last-child {
+    font-size: 1.05rem;
+  }
+  
+  .special-notes {
+    padding: 28px 25px;
+  }
+  
+  .special-notes h3 {
+    font-size: 1.5rem;
+  }
+  
+  .special-notes ul {
+    padding-left: 22px;
+  }
+  
+  .special-notes li {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    font-size: 1.05rem;
+  }
+}
+
+/* Mobile - 480px */
+@media (max-width: 480px) {
+  .registration-container {
+    padding: 30px 12px;
+  }
+  
+  .registration-title {
+    font-size: 1.8rem;
+  }
+  
+  .title-icon {
+    font-size: 2.2rem;
+  }
+  
+  .registration-subtitle {
+    font-size: 1.05rem;
     padding: 0 10px;
   }
   
@@ -308,84 +414,87 @@
   }
   
   .notice-card {
-    flex-direction: column;
-    text-align: center;
-    gap: 15px;
     padding: 25px 20px;
   }
   
-  .notice-icon {
-    align-self: center;
+  .notice-text h3 {
+    font-size: 1.25rem;
   }
   
-  .table-header,
+  .notice-text p {
+    font-size: 1.05rem;
+  }
+  
+  .registration-fees-section h3 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+  }
+  
+  .table-header {
+    font-size: 1.1rem;
+    padding: 18px;
+  }
+  
   .table-row {
-    grid-template-columns: 1fr;
-    gap: 15px;
-    text-align: center;
+    padding: 18px;
   }
   
   .table-cell {
-    justify-content: center;
-    padding: 12px 0;
-    border-bottom: 1px solid #fde68a;
+    padding: 16px 12px;
+    font-size: 1.05rem;
   }
   
-  .table-cell:last-child {
-    border-bottom: none;
+  .table-cell.category {
+    font-size: 1.05rem;
+    line-height: 1.6;
   }
   
-  .table-cell.category::before {
-    content: "Category: ";
-    font-weight: 600;
-    color: #6b7280;
-    display: block;
-    margin-bottom: 5px;
+  .table-cell.early,
+  .table-cell.late {
+    font-size: 1.25rem;
   }
   
-  .table-cell.early::before {
-    content: "Early Bird: ";
-    font-weight: 600;
-    color: #6b7280;
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .table-cell.late::before {
-    content: "Late Registration: ";
-    font-weight: 600;
-    color: #6b7280;
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .includes-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
+  .registration-includes h3 {
+    font-size: 1.5rem;
   }
   
   .include-item {
-    padding: 20px;
-    flex-direction: row;
+    padding: 20px 18px;
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+  
+  .include-icon {
+    font-size: 1.7rem;
+  }
+  
+  .include-item span:last-child {
+    font-size: 1.05rem;
   }
   
   .special-notes {
     padding: 25px 20px;
   }
   
-  .special-notes ul {
-    padding-left: 20px;
+  .special-notes h3 {
+    font-size: 1.4rem;
   }
   
   .special-notes li {
-    margin-bottom: 15px;
+    font-size: 1.05rem;
     line-height: 1.7;
   }
 }
 
-@media (max-width: 480px) {
+/* Small Mobile - 360px */
+@media (max-width: 360px) {
   .registration-container {
-    padding: 30px 5px;
+    padding: 25px 10px;
+  }
+  
+  .registration-title {
+    font-size: 1.6rem;
   }
   
   .title-icon {
@@ -397,79 +506,73 @@
   }
   
   .registration-main {
-    padding: 25px 15px;
-    gap: 25px;
+    padding: 25px 18px;
+    gap: 28px;
   }
   
   .notice-card {
-    padding: 20px 15px;
+    padding: 22px 18px;
   }
   
   .notice-text h3 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
   
   .notice-text p {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
   
   .registration-fees-section h3 {
-    font-size: 1.4rem;
-    margin-bottom: 20px;
+    font-size: 1.5rem;
   }
   
   .table-header,
   .table-row {
-    padding: 20px 15px;
+    padding: 16px;
   }
   
   .table-cell {
-    padding: 15px 10px;
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
   
   .table-cell.category {
-    font-size: 0.9rem;
-    line-height: 1.4;
+    font-size: 1rem;
   }
   
-  .registration-includes h3 {
-    font-size: 1.3rem;
-  }
-  
-  .include-item {
-    padding: 18px 15px;
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-  }
-  
-  .include-icon {
-    font-size: 1.6rem;
-  }
-  
-  .include-item span:last-child {
-    font-size: 0.95rem;
-  }
-  
-  .special-notes {
-    padding: 20px 15px;
-  }
-  
-  .special-notes h3 {
+  .table-cell.early,
+  .table-cell.late {
     font-size: 1.2rem;
   }
   
+  .include-item {
+    padding: 18px 16px;
+  }
+  
+  .include-item span:last-child {
+    font-size: 1rem;
+  }
+  
+  .special-notes {
+    padding: 22px 18px;
+  }
+  
+  .special-notes h3 {
+    font-size: 1.3rem;
+  }
+  
   .special-notes li {
-    font-size: 0.95rem;
-    line-height: 1.6;
+    font-size: 1rem;
   }
 }
 
-/* Extra small devices */
-@media (max-width: 360px) {
+/* Ultra Small - 320px */
+@media (max-width: 320px) {
   .registration-container {
-    padding: 25px 3px;
+    padding: 20px 8px;
+  }
+  
+  .registration-title {
+    font-size: 1.5rem;
   }
   
   .title-icon {
@@ -477,28 +580,92 @@
   }
   
   .registration-subtitle {
-    font-size: 0.95rem;
+    font-size: 1rem;
+    line-height: 1.6;
   }
   
   .registration-main {
-    padding: 20px 12px;
-    gap: 20px;
+    padding: 22px 15px;
+    gap: 25px;
+    border-radius: 15px;
   }
   
   .notice-card {
-    padding: 18px 12px;
+    padding: 20px 15px;
+  }
+  
+  .notice-text h3 {
+    font-size: 1.15rem;
+  }
+  
+  .notice-text p {
+    font-size: 1rem;
+  }
+  
+  .registration-fees-section h3 {
+    font-size: 1.4rem;
   }
   
   .table-header,
   .table-row {
+    padding: 15px;
+  }
+  
+  .table-header {
+    font-size: 1.05rem;
+  }
+  
+  .table-cell {
     padding: 15px 10px;
+    font-size: 1rem;
+  }
+  
+  .table-cell.category {
+    font-size: 1rem;
+  }
+  
+  .table-cell.early,
+  .table-cell.late {
+    font-size: 1.2rem;
+  }
+  
+  .registration-includes h3 {
+    font-size: 1.3rem;
   }
   
   .include-item {
-    padding: 15px 12px;
+    padding: 16px 14px;
+  }
+  
+  .include-icon {
+    font-size: 1.6rem;
+  }
+  
+  .include-item span:last-child {
+    font-size: 1rem;
   }
   
   .special-notes {
-    padding: 18px 12px;
+    padding: 20px 15px;
+    border-radius: 15px;
+  }
+  
+  .special-notes h3 {
+    font-size: 1.25rem;
+  }
+  
+  .special-notes li {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .include-item,
+  .notice-card,
+  .table-row {
+    min-height: 48px;
   }
 }

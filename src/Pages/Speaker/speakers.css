@@ -1,15 +1,3 @@
-/* Extra Responsive for Speaker Cards */
-@media (max-width: 400px) {
-  .speakers-grid {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    padding: 0 2vw;
-  }
-  .speaker-card-wrapper .profile-card {
-    max-width: 98vw;
-    min-width: 0;
-  }
-}
 /* Speakers Component Styles - Gold, Blue, and White Theme */
 
 .speakers-container {
@@ -167,128 +155,6 @@
   max-width: 350px;
 }
 
-/* Tablet View - 2 cards per row */
-@media (max-width: 1200px) {
-  .speakers-container {
-    padding: 30px 0;
-  }
-  
-  .speakers-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-    padding: 0 15px;
-  }
-  
-  .speakers-header {
-    padding: 20px 15px 0 15px;
-  }
-}
-
-/* Small Tablet View */
-@media (max-width: 768px) {
-  .speakers-container {
-    padding: 25px 0;
-  }
-  
-  .speakers-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 0 10px;
-  }
-  
-  .speakers-header {
-    margin-bottom: 30px;
-    padding: 20px 10px 0 10px;
-  }
-  
-  .speakers-subtitle {
-    font-size: 1rem;
-  }
-  
-  .speaker-card-wrapper .profile-card {
-    max-width: 280px;
-  }
-}
-
-/* Mobile View - 1 card per row */
-@media (max-width: 600px) {
-  .speakers-container {
-    padding: 20px 0;
-  }
-  
-  .speakers-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 0 10px;
-  }
-  
-  .speakers-header {
-    margin-bottom: 25px;
-    padding: 10px 10px 0 10px;
-  }
-  
-  .speakers-subtitle {
-    font-size: 0.95rem;
-    padding: 0 10px;
-  }
-  
-  .speaker-card-wrapper .profile-card {
-    max-width: 320px;
-    width: 100%;
-  }
-}
-
-/* Extra Small Mobile View */
-@media (max-width: 480px) {
-  .speakers-container {
-    padding: 15px 0;
-  }
-  
-  .speakers-grid {
-    gap: 15px;
-    padding: 0 5px;
-  }
-  
-  .speakers-header {
-    margin-bottom: 20px;
-    padding: 10px 5px 0 5px;
-  }
-  
-  .speakers-subtitle {
-    font-size: 0.9rem;
-    padding: 0 5px;
-  }
-  
-  .speaker-card-wrapper .profile-card {
-    max-width: 280px;
-  }
-}
-
-/* Very Small Mobile View */
-@media (max-width: 320px) {
-  .speakers-container {
-    padding: 10px 0;
-  }
-  
-  .speakers-grid {
-    gap: 10px;
-    padding: 0 5px;
-  }
-  
-  .speakers-header {
-    margin-bottom: 15px;
-    padding: 10px 5px 0 5px;
-  }
-  
-  .speakers-subtitle {
-    font-size: 0.85rem;
-  }
-  
-  .speaker-card-wrapper .profile-card {
-    max-width: 260px;
-  }
-}
-
 /* Animation for the grid */
 .speakers-grid {
   animation: fadeIn 0.8s ease-out;
@@ -334,28 +200,442 @@
   }
 }
 
+/* ===== RESPONSIVE DESIGN - TABLETS AND MOBILE ONLY ===== */
+
+/* Large Tablet - 2 cards per row (1024px - 1200px) */
+@media (max-width: 1200px) {
+  .speakers-container {
+    padding: 35px 14px;
+  }
+  
+  .speakers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 80px;
+    padding: 0 20px;
+  }
+  
+  .speakers-header {
+    padding: 20px 20px 0 20px;
+    margin-bottom: 45px;
+  }
+
+  .speakers-title {
+    font-size: 36px;
+  }
+
+  .speaker-card-wrapper .profile-card {
+    max-width: 320px;
+  }
+}
+
+/* Medium Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+  .speakers-container {
+    padding: 32px 12px;
+  }
+  
+  .speakers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 60px;
+    padding: 0 18px;
+  }
+  
+  .speakers-header {
+    padding: 18px 18px 0 18px;
+    margin-bottom: 40px;
+  }
+
+  .speakers-title {
+    font-size: 34px;
+  }
+
+  .speakers-subtitle {
+    font-size: 0.98rem;
+  }
+
+  .speaker-card-wrapper .profile-card {
+    max-width: 300px;
+  }
+
+  /* Reduce math formula visibility on tablets */
+  .speakers-container::before,
+  .speakers-container::after,
+  .speakers-header::before,
+  .speakers-header::after,
+  .speakers-grid::before {
+    opacity: 0.5;
+  }
+}
+
+/* Small Tablet (600px - 768px) */
+@media (max-width: 768px) {
+  .speakers-container {
+    padding: 28px 10px;
+  }
+  
+  .speakers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px 40px;
+    padding: 0 12px;
+  }
+  
+  .speakers-header {
+    margin-bottom: 35px;
+    padding: 16px 12px 0 12px;
+  }
+
+  .speakers-title {
+    font-size: 32px;
+    margin-bottom: 6px;
+  }
+  
+  .speakers-subtitle {
+    font-size: 0.96rem;
+    max-width: 500px;
+  }
+  
+  .speaker-card-wrapper .profile-card {
+    max-width: 280px;
+  }
+
+  /* Further reduce math formulas */
+  .speakers-container::before,
+  .speakers-container::after {
+    font-size: 1.4rem;
+  }
+
+  .speakers-header::before,
+  .speakers-header::after {
+    font-size: 1rem;
+  }
+
+  .speakers-grid::before {
+    font-size: 1.3rem;
+  }
+}
+
+/* Mobile Landscape & Large Mobile (480px - 600px) */
+@media (max-width: 600px) {
+  .speakers-container {
+    padding: 24px 8px;
+  }
+  
+  .speakers-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 10px;
+    max-width: 400px;
+  }
+  
+  .speakers-header {
+    margin-bottom: 30px;
+    padding: 14px 10px 0 10px;
+  }
+
+  .speakers-title {
+    font-size: 28px;
+  }
+  
+  .speakers-subtitle {
+    font-size: 0.94rem;
+    padding: 0 10px;
+    max-width: 450px;
+  }
+  
+  .speaker-card-wrapper .profile-card {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* Hide some math formulas on mobile */
+  .speakers-header::before,
+  .speakers-header::after,
+  .speakers-grid::before {
+    display: none;
+  }
+
+  .speakers-container::before {
+    top: 10%;
+    left: 5%;
+    font-size: 1.2rem;
+  }
+
+  .speakers-container::after {
+    bottom: 15%;
+    right: 5%;
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile Portrait (400px - 480px) */
+@media (max-width: 480px) {
+  .speakers-container {
+    padding: 20px 6px;
+  }
+  
+  .speakers-grid {
+    gap: 18px;
+    padding: 0 8px;
+    max-width: 360px;
+  }
+  
+  .speakers-header {
+    margin-bottom: 26px;
+    padding: 12px 8px 0 8px;
+  }
+
+  .speakers-title {
+    font-size: 26px;
+  }
+  
+  .speakers-subtitle {
+    font-size: 0.92rem;
+    padding: 0 8px;
+  }
+  
+  .speaker-card-wrapper .profile-card {
+    max-width: 100%;
+  }
+
+  .speakers-container::before {
+    font-size: 1.1rem;
+    top: 8%;
+    left: 3%;
+  }
+
+  .speakers-container::after {
+    font-size: 1rem;
+    bottom: 12%;
+    right: 3%;
+  }
+}
+
+/* Small Mobile (360px - 400px) */
+@media (max-width: 400px) {
+  .speakers-container {
+    padding: 18px 5px;
+  }
+  
+  .speakers-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 6px;
+    max-width: 340px;
+  }
+  
+  .speakers-header {
+    margin-bottom: 24px;
+    padding: 12px 6px 0 6px;
+  }
+
+  .speakers-title {
+    font-size: 24px;
+  }
+
+  .speakers-subtitle {
+    font-size: 0.9rem;
+    padding: 0 6px;
+  }
+
+  .speaker-card-wrapper .profile-card {
+    max-width: 98vw;
+    min-width: 0;
+  }
+
+  .speakers-container::before {
+    font-size: 1rem;
+    opacity: 0.1;
+  }
+
+  .speakers-container::after {
+    font-size: 0.95rem;
+    opacity: 0.12;
+  }
+}
+
+/* Extra Small Mobile (320px - 360px) */
+@media (max-width: 360px) {
+  .speakers-container {
+    padding: 16px 4px;
+  }
+  
+  .speakers-grid {
+    gap: 14px;
+    padding: 0 5px;
+    max-width: 310px;
+  }
+  
+  .speakers-header {
+    margin-bottom: 22px;
+    padding: 10px 5px 0 5px;
+  }
+
+  .speakers-title {
+    font-size: 22px;
+    letter-spacing: 0.5px;
+  }
+
+  .speakers-subtitle {
+    font-size: 0.88rem;
+    padding: 0 5px;
+    line-height: 1.4;
+  }
+
+  .speaker-card-wrapper .profile-card {
+    max-width: 100%;
+  }
+
+  .speakers-container::before,
+  .speakers-container::after {
+    font-size: 0.9rem;
+    opacity: 0.08;
+  }
+}
+
+/* Minimum Mobile - 320px */
+@media (max-width: 320px) {
+  .speakers-container {
+    padding: 14px 3px;
+  }
+  
+  .speakers-grid {
+    gap: 12px;
+    padding: 0 4px;
+    max-width: 312px;
+  }
+  
+  .speakers-header {
+    margin-bottom: 20px;
+    padding: 10px 4px 0 4px;
+  }
+
+  .speakers-title {
+    font-size: 20px;
+    letter-spacing: 0.3px;
+  }
+
+  .speakers-subtitle {
+    font-size: 0.85rem;
+    padding: 0 4px;
+    line-height: 1.35;
+  }
+
+  .speaker-card-wrapper .profile-card {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  /* Minimal math formulas on smallest screens */
+  .speakers-container::before,
+  .speakers-container::after {
+    font-size: 0.85rem;
+    opacity: 0.06;
+  }
+}
+
+/* Landscape Orientation on Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .speakers-container {
+    padding: 20px 10px;
+  }
+
+  .speakers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px 30px;
+  }
+
+  .speakers-header {
+    margin-bottom: 25px;
+  }
+
+  .speakers-title {
+    font-size: 26px;
+  }
+
+  .speaker-card-wrapper .profile-card {
+    max-width: 260px;
+  }
+}
+
 /* Touch Device Optimizations */
 @media (hover: none) and (pointer: coarse) {
   .speakers-grid {
-    gap: 15px;
+    gap: 18px;
   }
   
   .speaker-card-wrapper .profile-card {
     margin: 5px 0;
   }
-}
 
-/* Ensure proper contrast and accessibility */
-@media (prefers-color-scheme: dark) {
-  .speakers-subtitle {
-    color: #666;
+  /* Disable hover transforms on touch devices */
+  .speaker-card-wrapper .profile-card:hover {
+    transform: none;
   }
 }
 
-/* High contrast mode support */
+/* Accessibility - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .speakers-container::before,
+  .speakers-container::after,
+  .speakers-header::before,
+  .speakers-header::after,
+  .speakers-grid::before {
+    animation: none;
+  }
+
+  .speakers-grid,
+  .speaker-card-wrapper {
+    animation: none;
+  }
+
+  .speaker-card-wrapper .profile-card {
+    transition: none;
+  }
+}
+
+/* High Contrast Mode */
 @media (prefers-contrast: high) {
-  
   .speakers-subtitle {
     color: #000;
+  }
+
+  .speakers-container::before,
+  .speakers-container::after,
+  .speakers-header::before,
+  .speakers-header::after,
+  .speakers-grid::before {
+    display: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .speakers-container {
+    padding: 20px;
+    background: white;
+  }
+
+  .speakers-container::before,
+  .speakers-container::after,
+  .speakers-header::before,
+  .speakers-header::after,
+  .speakers-grid::before {
+    display: none;
+  }
+
+  .speakers-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .speaker-card-wrapper {
+    page-break-inside: avoid;
+  }
+}
+
+/* Dark Mode Support (if needed) */
+@media (prefers-color-scheme: dark) {
+  .speakers-subtitle {
+    color: #999;
   }
 }

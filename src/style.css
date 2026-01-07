@@ -51,7 +51,6 @@ h1 {
 /* Global page wrapper for standalone pages */
 .page-wrapper {
   width: 100%;
-  min-height: 100vh;
   /* padding-top: 89px; Account for fixed navbar */
   background-color: #ffffff;
   overflow-x: hidden;

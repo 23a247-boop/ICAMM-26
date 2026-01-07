@@ -16,101 +16,8 @@ html, body {
 .hero {
   width: 100%;
   min-height: 100vh;
-  padding-top: var(--nav-h, 72px);
-  scroll-margin-top: var(--nav-h, 72px);
-}
-
-/* === HERO HEADER (White Background Section) === */
-.hero-header {
-  background: white;
-  border-bottom: 2px solid #e0e0e0;
-  min-height: 160px;
-  height: auto;
-  padding: 1rem 2rem;
-  overflow: hidden;
-}
-
-.header-content {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  align-items: center;
-  max-width: 1400px;
-  margin: 0 auto;
-  gap: 2rem;
-  height: 100%;
-}
-
-.header-left-logos, .header-right-logos {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 3.5rem;
-}
-
-.header-logo-75, .header-logo-100 {
-  height: 80px;
-  width: auto;
-  object-fit: contain;
-}
-
-.header-psg-logo {
-  height: 60px;
-  width: auto;
-  object-fit: contain;
-}
-
-.header-center {
-  text-align: center;
-}
-
-.main-logo {
-  height: 200px;
-  width: auto;
-  object-fit: contain;
-}
-
-
-.header-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #0f357d;
-  margin: 0.5rem 0;
-  letter-spacing: 1px;
-}
-
-.header-location {
-  font-size: 1.2rem;
-  color: #666;
-  margin-bottom: 1.5rem;
-}
-
-.header-info {
-  background: #f8f9fa;
-  padding: 1.5rem;
-  border-radius: 15px;
-  border-left: 4px solid #0f357d;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.department-text {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #0f357d;
-  margin: 0.5rem 0;
-}
-
-.college-text {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #333;
-  margin: 0.5rem 0;
-}
-
-.address-text {
-  font-size: 1rem;
-  color: #666;
-  margin: 0.5rem 0;
+  padding-top: var(--nav-h, 12rem);
+  scroll-margin-top: var(--nav-h, -2rem);
 }
 
 /* === HERO MAIN (Video Background Section) === */
@@ -138,7 +45,7 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 150px; /* Increased space for sponsors */
+  padding-bottom: 150px;
   bottom: 15px;
 }
 
@@ -146,7 +53,7 @@ html, body {
   background: rgba(255, 255, 255, 0.633);
   backdrop-filter: blur(2px);
   border-radius: 20px;
-  padding: 1rem 2.5rem;
+  padding: 1.5rem 2.5rem;
   margin-top: 10px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -165,7 +72,7 @@ html, body {
   letter-spacing: 2px;
 }
 
-.uppcase{
+.uppcase {
   font-size: 20px;
 }
 
@@ -199,7 +106,7 @@ html, body {
   font-size: 1.5rem;
   background-color: #0f357d;
   width: fit-content;
-  padding: 10px;
+  padding: 10px 20px;
   color: white;
   font-weight: 500;
   margin: 1rem 0;
@@ -236,28 +143,6 @@ html, body {
   z-index: -1;
 }
 
-/* === MATH SYMBOLS === */
-.math-symbols {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.math-symbol {
-  position: absolute;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 1.5rem;
-  font-family: 'Times New Roman', serif;
-  text-shadow: 0 0 10px rgba(30, 144, 255, 0.5);
-  animation: floatSymbol 12s ease-in-out forwards;
-  will-change: transform, opacity;
-}
-
 /* === HERO CONTENT === */
 .hero-inner {
   display: grid;
@@ -287,13 +172,12 @@ html, body {
   transform: scale(1.05);
 }
 
-/* Separate class names for individual logos with same styling */
 .logo-75-years {
   width: 150px;
   max-width: 11000px;
   height: auto;
   object-fit: contain;
-  filter: brightness(2.5) ;
+  filter: brightness(2.5);
   transition: all 0.3s ease;
 }
 
@@ -379,157 +263,83 @@ html, body {
 /* === COUNTDOWN SECTION === */
 .countdown-container {
   margin-top: 3rem;
-  margin-bottom: 4rem; /* Increased bottom margin to prevent overlap */
+  margin-bottom: 4rem;
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
-/* === SPONSORS SECTION === */
-.sponsors-section, 
-.sponsors-container {
-  position: absolute;
-  bottom: 30px; /* Moved up slightly */
-  left: 50%;
-  transform: translateX(-50%); /* Center horizontally */
-  width: 90%;
-  max-width: 600px;
+/* === LOGO SECTION === */
+.main-logo-container {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-  /* Enhanced background for better separation */
-  background: rgba(255, 255, 255, 0.633);
-  backdrop-filter: blur(15px);
-  border-radius: 15px;
-  padding: 1.5rem 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  
-  z-index: 15; /* Higher z-index than countdown */
+  justify-content: center;
+  margin-bottom: 1rem;
 }
 
-.sponsors-title {
-  color: #0f357d;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.sponsors-text {
-  color: black;
-  font-size: 1rem;
-  font-style: italic;
-  margin: 0;
-  opacity: 0.9;
+.main-logo {
+  height: 200px;
+  width: auto;
+  object-fit: contain;
 }
 
 /* === RESPONSIVE STYLES === */
-/* Hide mobile logos on desktop */
 .header-all-logos-mobile {
   display: none;
 }
 
+/* Tablet and below - 1024px */
 @media (max-width: 1024px) {
-  .hero-header {
-    padding: 1rem;
-    min-height: auto;
-    height: auto;
+  .hero-main{
+    margin-top: 30px;
+  }
+  .conference-title {
+    font-size: 2.2rem;
   }
   
-  .header-content {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-    text-align: center;
-    padding: 0;
-    width: 100%;
+  .conference-theme {
+    font-size: 1.6rem;
   }
   
-  .header-left-logos, .header-right-logos {
-    display: none;
+  .conference-name {
+    font-size: 2.8rem;
   }
   
-  .header-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 0;
-  }
-  
-  .main-logo-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  .conference-dates {
+    font-size: 1.4rem;
   }
   
   .main-logo {
-    height: 80px;
+    height: 180px;
+  }
+}
+
+/* Mobile - 768px and below */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: var(--nav-h, 10rem);
+  }
+
+  .hero-main {
+    margin-top: 50px; /* Fixed: removed 75px margin */
+    min-height: 100vh; /* Fixed: ensure full viewport */
   }
   
-  .header-all-logos-mobile {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 0.8rem;
-    width: 100%;
-    margin: 0.5rem 0;
+  .hero-content {
+    padding-bottom: 120px;
   }
   
-  .header-all-logos-mobile img {
-    height: 45px;
-    width: auto;
-    object-fit: contain;
-  }
-  
-  .header-info {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    padding: 1rem;
-  }
-  
-  .header-title {
-    font-size: 1rem;
-    line-height: 1.2;
-    margin: 0.3rem auto;
-    text-align: center;
-    width: 100%;
-  }
-  
-  .header-location {
-    font-size: 1rem;
-    margin: 0.3rem auto;
-    text-align: center;
-    width: 100%;
-  }
-  
-  .department-text {
-    font-size: 1rem;
-    margin: 0.3rem auto;
-    text-align: center;
-    width: 100%;
-  }
-  
-  .college-text {
-    font-size: 0.9rem;
-    margin: 0.3rem auto;
-    text-align: center;
-    width: 100%;
-  }
-  
-  .address-text {
-    font-size: 0.85rem;
-    margin: 0.3rem auto;
-    text-align: center;
-    width: 100%;
+  .conference-info {
+    padding: 1.5rem 2rem;
   }
   
   .conference-title {
     font-size: 2rem;
+    margin-top: -1.5rem;
+  }
+  
+  .uppcase {
+    font-size: 18px;
   }
   
   .conference-theme {
@@ -538,13 +348,182 @@ html, body {
   
   .conference-name {
     font-size: 2.5rem;
+    letter-spacing: 2px;
   }
   
   .conference-dates {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
+    padding: 10px 18px;
+  }
+  
+  .countdown-container {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .main-logo {
+    height: 160px;
   }
 }
 
+/* Small mobile - 480px and below */
+@media (max-width: 480px) {
+  .hero-main {
+    padding: 1.5rem 0.75rem;
+    min-height: 100vh; /* Fixed: ensure full viewport */
+  }
+  
+  .hero-content {
+    padding-bottom: 100px;
+  }
+  
+  .conference-info {
+    padding: 1.25rem 1.5rem;
+    border-radius: 16px;
+  }
+  
+  .conference-title {
+    font-size: 1.75rem;
+    letter-spacing: 1px;
+    margin-top: -1rem;
+    line-height: 1.3;
+  }
+  
+  .uppcase {
+    font-size: 16px;
+  }
+  
+  .conference-theme {
+    font-size: 1.35rem;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+  }
+  
+  .conference-name {
+    font-size: 2.2rem;
+    letter-spacing: 1.5px;
+  }
+  
+  .conference-dates {
+    font-size: 1.25rem;
+    padding: 10px 16px;
+  }
+  
+  .countdown-container {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .main-logo {
+    height: 140px;
+  }
+}
+
+/* Extra small mobile - 360px and below */
+@media (max-width: 360px) {
+  .hero-main {
+    padding: 1.25rem 0.5rem;
+    min-height: 100vh; /* Fixed: ensure full viewport */
+  }
+  
+  .hero-content {
+    padding-bottom: 90px;
+  }
+  
+  .conference-info {
+    padding: 1.2rem 1.25rem;
+    border-radius: 14px;
+  }
+  
+  .conference-title {
+    font-size: 1.6rem;
+    letter-spacing: 0.8px;
+    line-height: 1.4;
+  }
+  
+  .uppcase {
+    font-size: 15px;
+  }
+  
+  .conference-theme {
+    font-size: 1.25rem;
+    letter-spacing: 0.4px;
+    line-height: 1.5;
+  }
+  
+  .conference-name {
+    font-size: 2rem;
+    letter-spacing: 1.2px;
+  }
+  
+  .conference-dates {
+    font-size: 1.15rem;
+    padding: 9px 14px;
+  }
+  
+  .main-logo {
+    height: 130px;
+  }
+}
+
+/* Ultra small mobile - 320px */
+@media (max-width: 320px) {
+  .hero-main {
+    padding: 1rem 0.4rem;
+    margin-top: 22.5px;
+    min-height: 100vh; /* Fixed: ensure full viewport */
+  }
+  
+  .hero-content {
+    padding-bottom: 80px;
+  }
+  
+  .conference-info {
+    padding: 1rem 1rem;
+    border-radius: 12px;
+  }
+  
+  .conference-title {
+    font-size: 1.45rem;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    margin-top: -0.8rem;
+  }
+  
+  .uppcase {
+    font-size: 14px;
+  }
+  
+  .conference-theme {
+    font-size: 1.15rem;
+    letter-spacing: 0.3px;
+    line-height: 1.5;
+    margin: 0.4rem 0;
+  }
+  
+  .conference-name {
+    font-size: 1.85rem;
+    letter-spacing: 1px;
+    margin: 0.8rem 0;
+  }
+  
+  .conference-dates {
+    font-size: 1.1rem;
+    padding: 8px 12px;
+    letter-spacing: 0.5px;
+  }
+  
+  .countdown-container {
+    margin-top: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .main-logo {
+    height: 120px;
+  }
+}
+
+/* Additional responsive fixes for hero logos */
 @media (min-width: 641px) and (max-width: 1024px) {
   .hero-inner {
     grid-template-columns: 96px 1fr 96px;
@@ -627,60 +606,5 @@ html, body {
   
   .hero-inst {
     font-size: 1.2rem;
-  }
-  
-  .sponsors-section {
-    margin-top: 1.5rem;
-  }
-}
-
-/* === RESPONSIVE FIXES FOR OVERLAP === */
-@media (max-width: 768px) {
-  .hero-content {
-    padding-bottom: 120px; /* Reduced for mobile */
-  }
-  
-  .countdown-container {
-    margin-bottom: 3rem; /* Reduced for mobile */
-  }
-  
-  .sponsors-section {
-    bottom: 20px;
-    width: 95%;
-    padding: 1rem 1.5rem;
-  }
-  
-  .sponsors-title {
-    font-size: 1rem;
-  }
-  
-  .sponsors-text {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-content {
-    padding-bottom: 100px; /* Further reduced for small mobile */
-  }
-  
-  .countdown-container {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .sponsors-section {
-    bottom: 15px;
-    width: 98%;
-    padding: 0.8rem 1rem;
-  }
-  
-  .sponsors-title {
-    font-size: 0.9rem;
-    margin-bottom: 8px;
-  }
-  
-  .sponsors-text {
-    font-size: 0.8rem;
   }
 }

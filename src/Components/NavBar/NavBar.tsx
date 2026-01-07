@@ -1,6 +1,11 @@
 import { useState, useEffect } from 'react';
 import './NavBar.css';
 
+import Logo75 from '../../Assets/75yearsLogo_PSGCollegeofTech.png';
+import Logo100 from '../../Assets/100yearsLogo_PsgSonsCharities.png';
+import inst from '../../Assets/PSG INSTITUTION.png'
+import PSGLogo from '../../Assets/PSGlogo.png';
+
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -185,6 +190,35 @@ const Navigation = () => {
           onClick={() => setMobileMenuOpen(false)}
         />
       )}
+      {/* Top Header Section with White Background */}
+      <div className="hero-header">
+        <div className="header-content">
+          <div className="header-left-logos">
+            <img src={Logo75} alt="75 Years of PSG College of Technology" className="header-logo-75" />
+            <img src={PSGLogo} alt="PSG College of Technology" className="header-psg-logo" />
+          </div>
+          
+          <div className="header-center">
+            {/* Mobile all logos horizontal */}
+            <div className="header-all-logos-mobile">
+              <img src={Logo75} alt="75 Years of PSG College of Technology" />
+              <img src={inst} alt="PSG Institution" />
+              <img src={Logo100} alt="100 Years of PSG Sons Charities" />
+              <img src={PSGLogo} alt="PSG Logo" />
+            </div>
+            <h1 className="header-title" style={{ whiteSpace: 'nowrap', textAlign: 'center', width: '100%' }}>
+              PSG COLLEGE OF TECHNOLOGY
+            </h1>
+              <p className="department-text">Department of Mathematics</p>
+              <p className="address-text">Coimbatore – 641004, Tamil Nadu, India</p>
+          </div>
+          
+          <div className="header-right-logos">
+            <img src={inst} alt="PSG Institution" className="header-psg-logo" />
+            <img src={Logo100} alt="100 Years of PSG Sons Charities" className="header-logo-100" />
+          </div>
+        </div>
+      </div>
     </nav>
   );
 };

@@ -86,12 +86,13 @@ const Details: React.FC = () => {
               
               
               <div className="important-notes">
-                <h3>Key Points</h3>
+                {/* <h3>Key Points</h3> */}
                 <ul>
-                  <li>The international journals associated with ICAMM 2026 are <strong>ISSN-approved</strong></li>
+                  <li>The organizing Committee is in discussions with journals indexed in Annexure 1&11/Scopus/ SCI for possible publication opportunities. Article processing charges are journal dependent and are to be borne by the authors.</li>
+                  {/* <li>The international journals associated with ICAMM 2026 are <strong>ISSN-approved</strong></li>
                   <li>Authors who wish to receive a hard copy of the journal must cover the associated charges</li>
                   <li>The editorial board holds the right to reject any paper for publication after the second round of review</li>
-                  <li>If a paper is rejected, the conference registration fee will <strong>not be refunded</strong></li>
+                  <li>If a paper is rejected, the conference registration fee will <strong>not be refunded</strong></li> */}
                 </ul>
               </div>
             </div>
@@ -108,20 +109,20 @@ const Details: React.FC = () => {
               <p className="section-subtitle">Strict guidelines to ensure originality and academic integrity</p>
             </div>
             <div className="plagiarism-content">
-              <div className="plagiarism-highlight">
+              {/* <div className="plagiarism-highlight">
                 <div className="highlight-card">
                   <div className="highlight-text">
                     <h3>Maximum Allowed Plagiarism</h3>
                     <p className="percentage">Below 20%</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
               
               <div className="policy-points">
                 <div className="policy-item">
                   <div className="policy-content">
                     <h4>Author Responsibility</h4>
-                    <p>Authors are responsible for checking the plagiarism (below 25%) of their papers before submission. Authors who republish their previously published work (self-plagiarism) will be subject to the same procedures.</p>
+                    <p>Authors are responsible for checking the plagiarism of their papers before submission. Authors who republish their previously published work (self-plagiarism) will be subject to the same procedures.</p>
                   </div>
                 </div>
                 

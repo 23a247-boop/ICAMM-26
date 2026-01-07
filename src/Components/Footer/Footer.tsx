@@ -130,7 +130,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <span>© {new Date().getFullYear()} ICAMM'26. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} ICAMM'26. All rights reserved. | Developed by <a href='https://www.linkedin.com/in/vippin-sagar-8123b928a/' target="_blank" className='webs-deve'><b>VIPPINSAGAR</b></a></span>
         </div>
       </div>
     </footer>
