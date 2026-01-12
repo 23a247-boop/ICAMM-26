@@ -10,6 +10,18 @@
   align-content: center;
 }
 
+.brochsty{
+  background-color: white;
+  color: #0f357d;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.brochsty:hover{
+  background-color: white;
+  color: #000;
+}
+
 .container {
   width: fit-content;
   margin: 0 auto;

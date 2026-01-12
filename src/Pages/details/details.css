@@ -217,6 +217,10 @@
   gap: 25px;
 }
 
+.PTEXT{
+  color: red;
+}
+
 .info-card {
   background: linear-gradient(135deg, #f8fafc, #f1f5f9);
   padding: 30px;

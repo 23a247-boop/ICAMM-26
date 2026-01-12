@@ -88,11 +88,9 @@ const Details: React.FC = () => {
               <div className="important-notes">
                 {/* <h3>Key Points</h3> */}
                 <ul>
-                  <li>The organizing Committee is in discussions with journals indexed in Annexure 1&11/Scopus/ SCI for possible publication opportunities. Article processing charges are journal dependent and are to be borne by the authors.</li>
-                  {/* <li>The international journals associated with ICAMM 2026 are <strong>ISSN-approved</strong></li>
-                  <li>Authors who wish to receive a hard copy of the journal must cover the associated charges</li>
-                  <li>The editorial board holds the right to reject any paper for publication after the second round of review</li>
-                  <li>If a paper is rejected, the conference registration fee will <strong>not be refunded</strong></li> */}
+
+                  <li>The selected papers will be recommended for publication in the <b>Indian Journal of Science and Technology</b>, based on the suggestion from the review team. However, the final decision on the publication will be made by the editorial team of the concered journal.</li>
+                  <li className='PTEXT'>Article processing charges are journal dependent and are to be borne by the authors.</li>
                 </ul>
               </div>
             </div>

@@ -2,6 +2,7 @@ import './about.css';
 import CollegeImg from '../../Assets/aboutcollege.jpg';
 import DepartmentImg from '../../Assets/Department.png';
 import ConferenceImg from '../../Assets/logo.png';
+import finalbrochure from '../../Assets/ICAMM BROCHURE Final.pdf';
 
 const About = () => {
   return (
@@ -94,6 +95,7 @@ const About = () => {
                   <p>
                     Through ICAMM 2026, the Department of Mathematics reaffirms its commitment to fostering academic excellence, interdisciplinary collaboration, and impactful research, in celebration of 75 years of PSG CT's legacy.
                   </p>
+                  <button onClick={() => window.open(finalbrochure, '_blank')} className='brochsty'>Brochure</button>
                 </>
               </div>
               </div>
